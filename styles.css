@@ -1,0 +1,152 @@
+/* BENJAMIN BEAR'S STORYBOOK */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6a7, #ffd6e7, #b8f2e6);
+    color: #4b5944;
+    min-height: 100vh;
+}
+
+/* TITLE */
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 44px;
+    color: #e97845;
+    text-shadow: 3px 3px #fff2bd;
+}
+
+header p {
+    font-size: 21px;
+    color: #56865a;
+    font-style: italic;
+}
+
+/* STORYBOOK */
+
+.storybook {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #fffdf5;
+    border: 6px solid #ffca70;
+    border-radius: 35px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ILLUSTRATION */
+
+.story-image {
+    flex: 1.2;
+    min-width: 0;
+}
+
+.story-image img {
+    width: 100%;
+    display: block;
+    border-radius: 22px;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* STORY TEXT */
+
+.story-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.story-text h2 {
+    font-size: 30px;
+    color: #e97845;
+}
+
+.story-text p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+
+}
+
+/* BUTTON */
+
+.next-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 28px;
+    background: #ffca55;
+    color: #57442c;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px #e6a637;
+    transition: transform 0.3s;
+}
+
+.next-button:hover {
+    transform: translateY(-4px);
+    background: #ffe082;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 15px;
+    color: #56865a;
+}
+
+/* MOBILE DESIGN */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    .storybook {
+        flex-direction: column;
+        margin: 15px;
+        padding: 20px;
+    }
+
+    .story-text h2 {
+        font-size: 26px;
+    }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    .story-image img {
+        animation: none;
+    }
+
+    .next-button {
+        transition: none;
+    }
+}
